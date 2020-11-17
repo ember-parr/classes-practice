@@ -7,7 +7,7 @@ namespace classes
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
 
             Employee Ember = new Employee("Ember", "Parr", "Worker Bee");
             Employee Justin = new Employee("Justin", "Adams", "Worker Bee");
@@ -18,6 +18,12 @@ namespace classes
             DunderStaff.Add(Justin);
 
             Company Dunder = new Company("Dunder Mifflin", DunderStaff);
+            Console.WriteLine($"{Dunder.Name} founded: {Dunder.DateFounded}");
+            Console.WriteLine("Employees: ");
+            foreach (Employee employee in Dunder.Employees)
+            {
+                Console.WriteLine($"{employee.FirstName} {employee.LastName}");
+            }
         }
     }
 }
